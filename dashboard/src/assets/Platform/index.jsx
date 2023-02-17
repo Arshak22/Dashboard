@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const API = "";
+const API = "https://crudcrud.com/api/68529239fb5345b19770ff166bb9ee4e";
 const list = "/user-list";
 
 export const getAllUsers = () => {
