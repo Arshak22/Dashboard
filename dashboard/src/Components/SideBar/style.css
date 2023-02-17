@@ -1,0 +1,35 @@
+.sideBar {
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+    background-color: #05872f;
+}
+
+.rowspan {
+    flex: 2;
+    margin-top: 25px;
+}
+
+.rowspan li {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.navItem {
+    display: block;
+    font-size: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.navItem:hover, .activeNav {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    transform: scale(1.1);
+}
