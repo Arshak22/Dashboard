@@ -24,7 +24,9 @@ export const Dashboard = () => {
             emailError: "",
             picError: "",
             errorAge: "",
-            genderError: ""
+            genderError: "",
+            passwordError: "",
+            confirmPasswordError: ""
         }
     );
 
@@ -102,7 +104,9 @@ export const Dashboard = () => {
             emailError: "",
             picError: "",
             errorAge: "",
-            genderError: ""
+            genderError: "",
+            passwordError: "",
+            confirmPasswordError: ""
         }
         if(!user.firstName) {
             tempError.firstNameError = "Fill your First Name";
@@ -132,6 +136,21 @@ export const Dashboard = () => {
             tempError.errorAge = "Enter your Age";
             v = false;
         }
+        if (!user.password) {
+            tempError.passwordError = "Enter your Password";
+            v = false;
+        }
+        if (!user.confirmPassword) {
+            tempError.confirmPasswordError = "Please Confirm Your Password";
+            v = false;
+        }else if(user.password!==user.confirmPassword){
+            tempError.confirmPasswordError = "Confirm Password needs to be the same"
+            v = false;
+        }
+        // if(user.password && user.confirmPassword && (user.password !== user.confirmPassword)) {
+        //     tempError.confirmPasswordError = "Confirm Password needs to be the same"
+        //     v = false;
+        // }
         setErrors(tempError);
         return v;
     };
@@ -155,7 +174,6 @@ export const Dashboard = () => {
                         <input onChange={handleProfession} type="text" className="myInput" name="profession" placeholder="Profession" required/>
                         <span className="error">{errors.professionError}</span>
                     </div>
-                    
                     <div>
                         <input onChange={handleAge} type="number" className="myInput" name="age" placeholder="Age" required/>
                         <span className="error">{errors.errorAge}</span>
@@ -166,8 +184,14 @@ export const Dashboard = () => {
                     </div>
                 </div>
                 <div className="inputGroup">
-                    <input onChange={handlePassword} className="myInput" type="password" id="password" name="password" placeholder="Password" required/>
-                    <input onChange={handleConfirmPassword} className="myInput" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required/>
+                    <div>
+                        <input onChange={handlePassword} className="myInput" type="password" id="password" name="password" placeholder="Password" required/>
+                        <span className="error">{errors.passwordError}</span>
+                    </div>
+                    <div>
+                        <input onChange={handleConfirmPassword} className="myInput" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required/>
+                        <span className="error">{errors.confirmPasswordError}</span>
+                    </div>
                 </div>
                 <h3>Gender</h3>
                 <div className="inputGroup">
