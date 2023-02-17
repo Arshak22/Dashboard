@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #301b4c;
+}
+
+.myAvatar {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profileInfo {
+    margin: 20px;
+    margin-left: 0;
+    color: #ffffff;
+}
