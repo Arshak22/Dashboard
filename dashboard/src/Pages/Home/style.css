@@ -31,4 +31,10 @@
     color: #ffffff;
     width: 40px;
     height: 40px;
+    margin-right: 20px;
+    transition: all 0.5s ease;
+}
+
+.mySocialIcon:hover {
+    transform: scale(0.8);
 }

@@ -3,6 +3,7 @@ import "./style.css";
 
 import MyProfilePic from "../../assets/images/MyProfilePic.jpg";
 import { FaFacebookSquare } from "react-icons/fa";
+import {BsGithub} from "react-icons/bs";
 
 export const Home = () => {
     return (
@@ -19,6 +20,7 @@ export const Home = () => {
                     <h3>Studies at TCO Academy</h3>
                     <h3>Social Media</h3>
                     <a href="https://www.facebook.com/arshak.qosakyan" rel="noreferrer" target="_blank"><FaFacebookSquare className="mySocialIcon"/></a>
+                    <a href="https://github.com/Arshak22" rel="noreferrer" target="_blank"><BsGithub className="mySocialIcon"/></a>
                 </div>
             </div>
         </div>
